@@ -1,0 +1,29 @@
+package com.redirect;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+//@WebServlet("/redirect2")
+public class redirect2 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+  
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		res.setContentType("text/html");
+		PrintWriter pw=res.getWriter();
+		pw.print("<h1> iam second servlet <h1>");
+		int a3=(int)req.getAttribute("a3");
+		a3=a3*a3;
+		pw.println("value" +a3);
+		
+	}
+
+}

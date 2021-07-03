@@ -1,0 +1,24 @@
+package librarymanagementseystem;
+import java.sql.*;
+
+public class Connection1 {
+	Connection c;
+	Statement s;
+	public Connection1() {
+		
+		try {
+        Class.forName("com.mysql.jdbc.Driver");
+	    c=DriverManager.getConnection("jdbc:mysql://localhost:3306//library","root","root");
+    	s=c.createStatement();
+    	System.out.println("ok");
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+		
+	}
+	public static void main(String[]args)
+	{
+		new Connection1();
+	}
+
+}

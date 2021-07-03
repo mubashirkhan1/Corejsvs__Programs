@@ -1,0 +1,10 @@
+package collectionprograms11;
+
+public class Tostingex {
+	int id;
+	String name;
+	public Tostingex(int a,String b){
+		
+	}
+	
+}

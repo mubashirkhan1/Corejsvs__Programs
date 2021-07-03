@@ -1,0 +1,16 @@
+package collectionprograms11;
+
+import java.util.TreeSet;
+
+public class Stringbufferontreeset {
+	public static void main(String[] args) {
+		TreeSet ts =new TreeSet();
+		ts.add("mando");
+		ts.add("piza");
+		ts.add("jalsod");
+		ts.add("khalid");
+		System.out.println(ts);
+		
+	}
+
+}

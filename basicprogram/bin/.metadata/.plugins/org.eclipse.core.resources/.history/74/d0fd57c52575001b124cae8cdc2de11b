@@ -1,0 +1,5 @@
+package logicalprograms;
+
+public class ReverseString {
+  String a="mubashir";
+}

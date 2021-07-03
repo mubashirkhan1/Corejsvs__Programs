@@ -1,0 +1,24 @@
+package Mapprograms;}
+
+import java.util.HashMap;
+
+public class Weekhashmap {
+public static void main(String[] args) {
+HashMap h=new HashMap();
+temp t=new temp();h.put(t,"mubashir"); 
+}
+
+
+
+
+
+
+class temp{
+	  public String toString() {       
+  	   return "temp";    
+     }  
+	 public void finilize() {
+     System.out.println("fivilize called");
+	 }    
+	 
+}     }                      

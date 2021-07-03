@@ -1,0 +1,13 @@
+package collectionprograms11;
+
+public interface Innerclassinterface {
+	void show7();
+	 class A1{
+		 void show4() {
+			 System.out.println("mubashir");
+			//public static void main(())
+		 }
+		 
+	 }
+
+}

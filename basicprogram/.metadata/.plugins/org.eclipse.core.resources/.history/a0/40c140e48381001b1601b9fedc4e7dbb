@@ -1,0 +1,158 @@
+package librarymanagementseystem;
+
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class Login_user extends JFrame implements ActionListener
+{
+	 private JPanel panel;
+	 private JTextField textfield;
+	 private JPasswordField passfield;
+	 private JButton b1,b2,b3;
+
+
+	public Login_user() 
+	{    setLayout(null);
+		setBackground( new Color(255, 0, 0 )); //background clour
+		setBounds(600,300,600,400);//  1 x axix right se, 2 y axix uper se 3 fram breathe , 4lenght , 
+		
+			panel =new JPanel(); // jpane ka obj se componet class ke method ko call
+			panel.setBackground(new Color(176, 224,230));
+			setContentPane(panel);//container div work 
+			panel.setLayout(null);
+			
+			
+			JLabel l1=new JLabel("Username  :  ");
+			l1.setBounds(124,89,95,24);               //firsl jlable
+			panel.add(l1);
+			
+
+			JLabel l2=new JLabel("Password  :  ");
+			l1.setBounds(124,124,95,24);               //second jlable
+			panel.add(l1);
+			
+			
+			
+			textfield= new JTextField();       // first text field
+			textfield.setBounds(210,93,157,20);
+			panel.add(textfield);
+			
+
+			passfield= new JPasswordField();       // first text field
+			passfield.setBounds(210,128,157,20);
+			panel.add(passfield);
+			
+			b1=new JButton("Login");
+			b1.addActionListener(this);
+			
+			b1.setForeground(new Color(46,139,87));    // text ka color set kerta hai
+			b1.setBackground(new Color(255,235,205));       //jo bhi backgroun color set kerta hai
+			b1.setBounds(149, 181, 113, 39);// size ka rehna haiisko plACE
+			panel.add(b1);
+			
+			
+			b2=new JButton("SingUp");
+			b2.addActionListener(this);
+			
+			b2.setForeground(new Color(139,69,90));    // text ka color set kerta hai
+			b2.setBackground(new Color(255,235,205));       //jo bhi backgroun color set kerta hai
+			b2.setBounds(289, 181, 113, 39);           // size ka rehna haiisko plACE
+			panel.add(b2);
+			
+			
+			b3=new JButton("Forget Password");
+			b3.addActionListener(this);
+			
+			b3.setForeground(new Color(205,92,92));    // text ka color set kerta hai
+			b3.setBackground(new Color(253,245,230));       //jo bhi backgroun color set kerta hai
+			b3.setBounds(199, 231, 179, 39);           // size ka rehna haiisko plACE
+			panel.add(b3);
+			
+			
+			JLabel l5=new JLabel("Trouble in Login");
+			l5.setFont(new Font("Tahoma",Font.PLAIN,15));
+			l5.setBackground(new Color(255,0,0));     
+			l5.setBounds(70,240,130,20);  
+			panel.add(l5);
+			
+		
+	}
+
+
+	
+	public void actionPerformed(ActionEvent e) 
+	{
+		if(e.getSource()==b1) 
+		{
+			boolean status=false;
+			try
+			{
+				Connection1	c=new Connection1();
+				String sql="select * from account where username=? and password=?";
+				PreparedStatement pst=c.c.prepareStatement(sql);
+				
+				pst.setString(1, textfield.getText());
+				pst.setString(2, passfield.getText());
+				
+				 ResultSet  rs= pst.executeQuery();     //resultset class ka obj execute qury return kerta hai line by line table me jump kerti ahi
+				 if(rs.next())
+				 {
+					 this.setVisible(false);   //SWING ME SAB FRAM BYDEFAULT FALSE HOTE HAII MEANS USER NOT SEE
+					 Loading lo= new Loading();
+					lo.setVisible(true);
+					 
+				 }
+				 else
+				 {
+					 
+					 JOptionPane.showMessageDialog(null, "Invalid Login!");
+					 
+				 }
+			}
+			catch(Exception e1)      //Action event ki help se dekh sakte hai user nw konsa button click kiya hau
+            							// actionperformed action lisner
+			{
+				e1.printStackTrace();
+			}
+		}
+		 if(e.getSource()==b2) 
+		 {
+			 this.setVisible(false);
+			 Signup su=new Signup();
+			 su.setVisible(true);
+		 }
+		 
+		 if(e.getSource()==b3) 
+		 {
+			 this.setVisible(false);
+			 Forget fo=new Forget();
+			 fo.setVisible(true);
+		 }
+		
+	                                              
+	}
+	
+	
+	 public static void main(String[] args) {
+		 new Login_user().setVisible(true);
+		
+	}
+
+
+	
+	
+}

@@ -1,0 +1,18 @@
+package collectionprograms11;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Arraylistbyuser {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		ArrayList<Integer> al=new ArrayList();
+		System.out.println("enter your number");
+		while(s.hasNext())
+		{
+			al.add(s.nextInt());
+		}
+		System.out.println();
+	}
+
+}

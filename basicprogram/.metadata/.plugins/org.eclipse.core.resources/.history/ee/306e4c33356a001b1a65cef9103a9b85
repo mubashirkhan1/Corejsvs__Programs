@@ -1,0 +1,10 @@
+package collectionprograms11;
+
+public class Covertarraytolist {
+	public static void main(String[] args) {
+		String []array= {"java","python","c#","ruby"};
+		System.out.println(array.toString());
+		
+	}
+
+}

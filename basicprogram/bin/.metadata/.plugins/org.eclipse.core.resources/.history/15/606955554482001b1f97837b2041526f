@@ -1,0 +1,42 @@
+package com.been;
+
+import java.sql.*;
+import java.util.*;
+import com.mysql.jdbc.Connection;
+
+public class Connection1 {
+//	public static void main(String[] args) {
+//		Connection1.getConnection();
+//	}
+	
+	
+	public static Connection getConnection()
+	 {  
+			     Connection con=null;  
+			  
+			   try
+			   {
+				   Class.forName("com.mysql.jdbc.Driver");
+				   con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/crud","root","root");
+				   System.out.println("ok");
+				   
+				   PreparedStatement ps=con.prepareStatement("insert into user (name,email,country) values(?,?,?)");  
+	                 ps.setString(1,"mubashir");  
+	                 ps.setString(2,"mubashirkhan1234@gamil.com");  
+	                 ps.setString(3,"india");  
+	                 
+	                 ps.executeUpdate();  
+				     
+				   
+			   }
+			   catch(Exception e)
+			   {
+				   e.printStackTrace();
+				   System.out.println("ok");
+				   
+			   }
+			   return con;  
+	 	} 
+
+
+}

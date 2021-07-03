@@ -1,0 +1,26 @@
+package Arrayprograms;
+
+public class Arraysort1 {
+	public static void main(String[] args) {
+		int temp;
+	
+//	int length;
+	int []array= { 2, 5, -2, 6, -3, 8, 0, -7, -9, 4 };
+      int	length=array.length;
+	for(int i=1;i<=length-1;i++)
+	{
+		for(int j=i;j<=length;j++) {
+			if(i>j)
+			{
+				temp=array[i];
+				array[i]=array[j];
+				array[j]=temp;
+			}
+			
+			
+		}
+		System.out.println(array[i]);
+	}
+	// for(int value:array) {System.out.println(array[value]);}
+	}
+}

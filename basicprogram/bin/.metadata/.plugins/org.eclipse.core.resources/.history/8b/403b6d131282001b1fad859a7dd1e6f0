@@ -1,0 +1,181 @@
+package com.userdao;
+import java.util.*;
+
+import org.eclipse.jdt.internal.compiler.batch.Main;
+
+import com.been.User_detail;
+
+import java.sql.*; 
+
+
+public class Daouser
+{
+ private static String url="jdbc:mysql:/localhost:3306/crud"; 
+ private static String username="root";
+ private static String password="root";
+ private static String driver="com.mysql.jdbc.Driver";
+ 
+ private static final String  insertintouser=" insert into user "+"( name,email,country) values (?,?,?);";  //insert info of user inuser
+ private static final String  selectuserbyid=" select * from user where id=?;";   // fetch value bases on id
+ private static final String  selectalluser=" select * from user ;";  //query fetch the  all info of user value 
+ private static final String  deleteuser=" delte * from user where id=?; "; //delete user 
+ private static final String  updateuser=" update user set name=? ,email=?,country=? where id=?;"; //Supdate 
+
+     
+ public static Connection getConnection()
+ {  
+		     Connection con=null;  
+		  
+		   try
+		   {
+			   Class.forName(driver);
+			   con=DriverManager.getConnection(url,username,password);
+			   System.out.println("ok");
+			     
+			   
+		   }
+		   catch(Exception e)
+		   {
+			  System.out.println("ok con");
+			   e.printStackTrace();
+			       
+		   }
+		return con;
+ }
+		  public static void main(String args[])
+		  {
+			  Daouser.getConnection();  
+		  }
+		  
+		  
+// 	} 
+//      public static int save(User_detail e) 
+//      {
+//    	  int status =0;
+//    	  try
+//    	  {
+//	    	  Connection con=Daouser.getConnection();
+//	    	  PreparedStatement ps=con.prepareStatement( "insertintouser");
+//	    	  
+//	    	  ps.setString(1, e.getName());
+//	    	  ps.setString(2, e.getEmail());
+//	    	  ps.setString(3, e.getCountry());
+//	    	  
+//	    	  status=ps.executeUpdate();
+//	    	  con.close(); 
+//	    	
+//	    	  
+//    	  }
+//    	  catch(Exception e1)
+//    	  {
+//    		  
+//    	  }
+//		return status;
+//		
+//      }
+//      
+//        public static int  update(User_detail e)
+//        {int status=0;
+//        	Connection con=Daouser.getConnection();
+//        	try
+//        	{
+//        		PreparedStatement ps=con.prepareStatement(deleteuser);
+//        		ps.setString(1,e.getName());   
+//                ps.setString(3,e.getEmail());  
+//                ps.setString(4,e.getCountry());  
+//                ps.setInt(5,e.getId());  
+//                  
+//                status=ps.executeUpdate();  
+//        		
+//        	}
+//        	catch(Exception e3)
+//        	{
+//        		e3.printStackTrace();
+//        	}
+//			return status;
+//        	
+//        	
+//        	
+//        }
+//      		public static int delete(int id)
+//      		{    int status=0;
+//      			Connection con=Daouser.getConnection();
+//      			try
+//      			{
+//      			
+//      			 PreparedStatement ps=con.prepareStatement("updateuser");  
+//                 ps.setInt(1,id);  
+//                 status=ps.executeUpdate();  
+//                 
+//                 con.close(); 
+//      			}
+//      			catch(Exception e) 
+//      			{
+//      			  e.printStackTrace();	
+//      			}
+//				return id;
+//      			
+//      			
+//      		}
+//      		
+//      		public static User_detail fetchuser(int id) 
+//      		{
+//      			User_detail u=new User_detail();
+//      			try
+//      			{
+//      				Connection con=Daouser.getConnection();
+//      				 PreparedStatement ps=con.prepareStatement("selectuserbyid"); 
+//      				  ps.setInt(1,id);  
+//      				  
+//      				  ResultSet rs1=ps.executeQuery();
+//      				  
+//      				  if(rs1.next())
+//      				  {
+//      				      u.setId(rs1.getInt(1));  
+//      	                u.setName(rs1.getString(2));  
+//      	                u.setEmail(rs1.getString(4));  
+//      	                u.setCountry(rs1.getString(5)); 
+//      					  
+//      					  
+//      				  }
+//      				   con.close(); 
+//      				
+//      			}
+//      			catch(Exception e4)
+//      			{
+//      				e4.printStackTrace();
+//      			}
+//				    return u;	
+//      		}
+//      		public static List<User_detail> getalluser()
+//      		{
+//      			List<User_detail> l=new ArrayList();
+//      			
+//      			try 
+//      			{
+//      			   Connection con=Daouser.getConnection();
+//      		        PreparedStatement ps=con.prepareStatement("selectalluser");
+//      		        ResultSet rs=ps.executeQuery();
+//      		        
+//      		        while(rs.next())
+//      		        {
+//      		        	User_detail  u=new User_detail();	
+//      		          u.setId(rs.getInt(1));  
+//                      u.setName(rs.getString(2));   
+//                      u.setEmail(rs.getString(3));  
+//                      u.setCountry(rs.getString(4));  
+//                      l.add(u);  
+//      		        	
+//      		        }
+//      		        con.close();
+//      			}
+//      			catch(Exception e6) 
+//      			{
+//      				e6.printStackTrace();
+//      			}
+//				return l;
+//      		}
+//      		
+}
+ 	
+

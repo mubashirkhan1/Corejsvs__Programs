@@ -1,0 +1,14 @@
+s<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="jspprograms3.jsp">
+<input type="text" name="name">  
+ 
+<input type="submit" value="go"><br/>  
+</form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+package com.java;
+ class Instanceof2
+{
+}
+
+ class Instanceof1 extends Instanceof2 {
+	 public static void main(String[] args) {
+		 Instanceof2 d=new Instanceof1();
+		 System.out.println(d instanceof Instanceof2);
+		
+	}
+
+}

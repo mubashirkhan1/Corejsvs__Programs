@@ -1,0 +1,20 @@
+package com.basic;
+
+ class Overrideexmple {
+	 
+	 A m1() {
+		//System.out.println("mubashir khan");
+		return new A(); 
+	}
+
+}
+
+ public class Overrideexmple33 extends Overrideexmple  {
+	B m1() {
+		System.out.println("mubashir khan....");
+		//return n;
+		return new B();
+	}
+
+}
+

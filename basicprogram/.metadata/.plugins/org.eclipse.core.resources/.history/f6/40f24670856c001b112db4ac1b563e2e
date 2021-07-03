@@ -1,0 +1,11 @@
+package collectionprograms11;
+import collectionprograms11.Innerclassinterface.A1;
+public class Innerclass1 {
+	public static void main(String[] args) {
+		A1 s=new A1();
+		s.show4();
+		
+	}
+	
+
+}

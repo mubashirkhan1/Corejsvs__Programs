@@ -1,0 +1,29 @@
+package com.java;
+
+import java.util.TreeSet;
+
+public class Treesetwithcostimizewithcomparable {
+	public static void main(String[] args) {
+		TreeSet t=new TreeSet();
+		t.add(1);
+		t.add(5);
+		t.add(3);
+		t.add(4);
+		t.add(2);
+		t.add(2);
+		System.out.println(t);
+	}
+
+}
+class Userdefinecomparable implements Comparable
+{
+	public int compareTo(Object obj1) {
+		
+	    Integer s1=(Integer)obj1;
+		int s2 = 0;
+		//return s1.compareTo(s2);
+		return s2;
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package logicalprograms;
+
+public class Stringvalueprintchar {
+	public static void main(String[] args) {
+		int value=12345; int rem=0;int rev=1;
+	   /*  for(int i=1; i<=value;i++)
+	     {
+	    	 
+	     }*/
+		while(value !=0) {
+			rem=value%10;
+			value=value/10;
+		
+			//rev=rev
+			System.out.println(rem);
+		}
+		//System.out.println(rem);
+	}
+
+	
+	
+
+}

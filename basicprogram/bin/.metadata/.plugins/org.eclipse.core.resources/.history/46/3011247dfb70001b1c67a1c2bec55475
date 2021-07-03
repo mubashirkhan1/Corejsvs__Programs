@@ -1,0 +1,15 @@
+package Mapprograms;
+
+import java.util.HashMap;
+
+public class Hashmapex4 {
+	public static void main(String[] args) {
+		HashMap hm=new HashMap();
+		hm.put(3, "mubashihr");
+		hm.put(1, "umar");
+		hm.put(4, "akhlaq");
+		hm.put(2, "bilal");
+		System.out.println(hm);
+	}
+
+}

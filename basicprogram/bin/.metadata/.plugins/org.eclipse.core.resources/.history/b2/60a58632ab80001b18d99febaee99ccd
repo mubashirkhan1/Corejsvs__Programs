@@ -1,0 +1,129 @@
+package librarymanagementseystem;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+	
+
+	public  class LoginFrame extends JFrame implements ActionListener
+	{
+		
+		LoginFrame()
+		    {
+		 
+		    }
+		    
+			public void actionPerformed(ActionEvent e) 
+			{
+				
+				
+			}
+		
+	}
+		    
+	public class Login {
+		
+	    public static void main(String[] a){
+	        //Creating object of LoginFrame class and setting some of its properties
+	        LoginFrame frame=new LoginFrame();
+	        frame.setTitle("Login Form");
+	        frame.setVisible(true);
+	        frame.setBounds(10,10,370,600);
+	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	        frame.setResizable(false);
+
+	    }
+
+	}
+	
+	
+	
+
+//			Loginuser login=new Loginuser();	
+//			Frame f=new Frame();
+//			f.setBackground(Color.BLUE);
+//			f.setBounds(LIGHT_GRAY, LIGHT_GRAY, LIGHT_GRAY, LIGHT_GRAY);
+//		}
+//		
+//	  private static final int LIGHT_GRAY = 0;
+//	  private JPanel panel;  //similar to html div 
+//	  private JTextField textfield;
+//	  private JPasswordField passwordfield;
+//	  private JButton b1,b2,b3;
+//	    
+//	  public  Loginuser(){
+//		  
+//		  
+//		  setLayout(null);
+//		  
+//		  setBackground (new Color(LIGHT_GRAY)); //color class in awt usew backround clour
+//		  setBounds(500,300,500,350);// Define this int x-coordinate, int y-coordinate, int width, int height)
+//		  
+//		  panel=new JPanel();
+//		  panel.setBackground(new Color(176,224,230));//clour backround 
+//		  
+//		  setContentPane(panel);//for coustom use layout not defult
+//		  setVisible(true);
+//		  panel.setLayout(null);
+//		  
+//		  JLabel l1=new JLabel("username  :");
+//		  l1.setBounds(124,89,95,24); 
+//		  panel.add(l1);
+//		  
+//		  JLabel l2=new JLabel("password  :");
+//		  l1.setBounds(124,124,95,20); 
+//		  panel.add(l2);
+//		  
+//		  textfield =new JTextField();
+//		  textfield.setBounds(210,93,157,20);  //for user field 
+//		  panel.add(textfield);
+//		  
+//		  passwordfield =new JPasswordField();
+//		  passwordfield.setBounds(210,128,157,20);//for pass field
+//		  panel.add(passwordfield);
+//		  
+//		  b1=new JButton("LOGIN");
+//		  b1.addActionListener(this);
+//		  
+//		  b1.setForeground(Color.GREEN);
+//		  b1.setBackground(Color.GRAY);
+//		  b1.setBounds(149, 181, 113, 39);
+//		  panel.add(b1);
+//		  
+//		  b2=new JButton("RAGISTER");
+//		  b2.addActionListener(this);
+//		  
+//		  b2.setForeground(Color.GREEN);
+//		  b2.setBackground(Color.GRAY);
+//		  b2.setBounds(289, 181, 113, 39);
+//		  panel.add(b2);
+//		  
+//		  b3=new JButton("FORGET PASS");
+//		  b3.addActionListener(this);
+//		  
+//		  b3.setForeground(Color.GREEN);
+//		  b3.setBackground(Color.GRAY);
+//		  b3.setBounds(199, 231, 179, 39);
+//		  panel.add(b3);
+//		  
+//		  
+//		  
+//		  JLabel l3=new JLabel("problem in login?");
+//		  l3.setFont(new Font("Tahoma",Font.BOLD,15)); //setfont method of jfram class insides
+//
+//		  l3.setForeground(Color.green);
+//		  l3.setBounds(70, 240, 130, 20);
+//		  panel.add(l3);
+//	  }
+//
+//	public void actionPerformed(ActionEvent e) {
+//		// TODO Auto-generated method stub
+//		
+//	}
+//
+//	
+//	  
+//		
+//	}

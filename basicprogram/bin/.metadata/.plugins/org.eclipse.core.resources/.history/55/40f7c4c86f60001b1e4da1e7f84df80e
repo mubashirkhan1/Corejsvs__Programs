@@ -1,0 +1,13 @@
+package com.java;
+
+public class Joinmethod extends Thread {
+public void run()
+{    try {
+	for(int i=1; i<=5; i++)
+	{ Thread.leep();
+	}
+	}
+		System.out.println(Thread.currentThread().getName()+" _ "+i);
+	}
+}
+}

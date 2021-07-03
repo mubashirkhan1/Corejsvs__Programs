@@ -1,0 +1,23 @@
+package collectionprograms11;
+ class Ab{
+
+	public void m1() {
+		// TODO Auto-generated method stub
+		
+	}}
+public class Anonymousinnerclass {
+	 
+		
+		static Ab a=new Ab() {
+			
+		public	void m1() {
+				System.out.println("mubashir khan");
+			}
+		};
+		public static void main(String[] args) {
+		   a.m1();
+	
+	 }
+
+}
+

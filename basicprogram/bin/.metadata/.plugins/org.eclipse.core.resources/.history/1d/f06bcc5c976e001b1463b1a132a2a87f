@@ -1,0 +1,13 @@
+package Mapprograms;
+
+import java.util.ArrayList;
+
+public class Arraytoarraylist {
+	public static void main(String[] args) {
+		int a[] = {1,2,3,4,5};
+		for(int va:a) {System.out.println(a);}
+		ArrayList al=new ArrayList();
+		
+	}
+
+}

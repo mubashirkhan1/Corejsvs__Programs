@@ -1,0 +1,11 @@
+package com.java;
+
+public abstract class Bike1 {
+	
+abstract void  run();
+}
+
+class bike2 extends Bike1{
+	void run(){System.out.println("Running-----");}
+}
+ 

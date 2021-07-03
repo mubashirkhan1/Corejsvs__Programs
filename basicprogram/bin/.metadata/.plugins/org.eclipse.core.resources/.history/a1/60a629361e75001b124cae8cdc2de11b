@@ -1,0 +1,13 @@
+package logicalprograms;
+
+public class Stringvalueprintchar {
+	public static void main(String[] args) {
+		String value="mubashir";
+		char character= value.charAt(0);
+		System.out.println(character);
+	}
+
+	
+	
+
+}

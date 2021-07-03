@@ -1,0 +1,17 @@
+package collectionprograms11;
+
+import java.util.PriorityQueue;
+
+public class priorityqueue {
+	public static void main(String[] args) {
+		PriorityQueue pq=new PriorityQueue();
+		pq.add("mubashir");
+		pq.add("khan");
+		pq.add("khalid");
+		pq.add("saif");
+		pq.add("Asad");
+		System.out.println("befor itreting"+ pq);
+		System.out.println(pq.element());
+	}
+
+}

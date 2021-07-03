@@ -1,0 +1,33 @@
+package com.hiddenform1;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/hiddenform1")
+public class hiddenform1 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+  
+	
+	protected void doGet(HttpServletRequest rq, HttpServletResponse rs) throws ServletException, IOException {
+		String fname1=rq.getParameter("fname");	
+	
+		 rs.setContentType("text/html");
+			PrintWriter pw=rs.getWriter();
+          pw.print("<html>");
+          pw.print("<body>");
+			pw.println("<h2> your name is   "+fname1+"</h2>");
+			 pw.println(" +<form action='hiddenform2' > "
+			 
+			 +"<input='text' name='fname' value='"+fname1+"' />"
+			 		+ "<button>do to secong</button>"
+			 		+ "</form>");
+		      pw.print("<html>");
+	          pw.print("<body>");
+	}
+}

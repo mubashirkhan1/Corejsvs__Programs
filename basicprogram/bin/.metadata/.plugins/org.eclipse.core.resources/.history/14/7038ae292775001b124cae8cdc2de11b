@@ -1,0 +1,6 @@
+package logicalprograms;
+
+public class fibonesisseriese {
+	Scanner sc=new Scanner();
+
+}

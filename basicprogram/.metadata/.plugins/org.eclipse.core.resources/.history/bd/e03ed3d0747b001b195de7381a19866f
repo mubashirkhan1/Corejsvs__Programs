@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Form page</title>
+<form method="Get" action="web">
+</head>
+<body>
+  
+  <h1>my form</h1>
+
+</form>
+</body>
+</html>

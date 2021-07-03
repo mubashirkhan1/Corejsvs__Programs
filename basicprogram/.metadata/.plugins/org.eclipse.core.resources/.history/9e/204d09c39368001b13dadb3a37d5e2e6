@@ -1,0 +1,25 @@
+package com.basic;
+import java.util.Scanner;
+
+public interface Tablebyuser1 {
+	void m1();
+	public static void main(String[] args) {
+		Tablebyuser s1=new Tablebyuser();
+		 s1.m1();
+	}
+
+}
+class Tablebyuser implements Tablebyuser1
+{ int n;
+	public void m1() {
+		
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter your table");
+		n=s.nextInt();
+		for(int i=1; i<=10; i++)
+		{
+			System.out.println(i*n);
+		}
+	}
+
+}

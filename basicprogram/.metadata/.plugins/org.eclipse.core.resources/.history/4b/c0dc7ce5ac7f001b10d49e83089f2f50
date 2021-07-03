@@ -1,0 +1,34 @@
+package com.ragister;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+//@WebServlet("/ragister1")
+public class ragister1 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	protected void doGet(HttpServletRequest rq, HttpServletResponse rs) throws ServletException, IOException {
+	 rs.setContentType("text/html");
+	PrintWriter pw=rs.getWriter();
+	//getting all the informatiom from the request
+
+	String name=rq.getParameter("username");
+	String pass=rq.getParameter("userpassword");
+	String email=rq.getParameter("useremail");
+	pw.print("</html>");
+	pw.println("<body>");
+	pw.print(name);
+	pw.print(pass);
+	pw.print(email);
+	pw.print("</body>");
+	pw.print("</html>");
+	}
+
+}

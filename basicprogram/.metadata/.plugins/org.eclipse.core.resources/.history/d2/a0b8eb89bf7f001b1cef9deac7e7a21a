@@ -1,0 +1,55 @@
+package com.ragister;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+//@WebServlet("/ragister1")
+public class ragister1 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	protected void doGet(HttpServletRequest rq, HttpServletResponse rs) throws ServletException, IOException {
+	 rs.setContentType("text/html");
+	PrintWriter pw=rs.getWriter();
+	//getting all the informatiom from the request
+
+	String uname=rq.getParameter("username");
+	String pass=rq.getParameter("userpassword");
+	String email=rq.getParameter("useremail");
+	pw.println("</html>");
+	pw.println("<body>");
+	pw.println(uname);
+	pw.println(pass);
+	pw.println(email);
+	
+	//connection create
+	try {
+		Class.forName("com.mysql.jdbc.Driver");
+		 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:8080/student","root","root");
+		 String qu="insert into user (name,password,email) values(?,?,?)";
+	    PreparedStatement pst=	 con.prepareStatement(qu);
+	    pst.setString(1,uname);
+	    pst.setString(2, pass);
+	    pst.setString(3, email);
+	    
+	    pst.executeUpdate();
+	    pw.print("<h1> done  </h1>");
+	    
+	} 
+		catch (Exception e) 
+		{
+			
+		e.printStackTrace();
+		pw.print("<h1> error...........</h1>");
+		}
+	pw.print("</body>");
+	pw.print("</html>");
+	}
+
+}

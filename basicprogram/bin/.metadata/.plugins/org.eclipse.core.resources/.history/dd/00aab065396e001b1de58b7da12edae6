@@ -1,0 +1,23 @@
+package Mapprograms;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class Sorted1 {
+	public static void main(String[] args) {
+		Map m=new HashMap();
+		m.put("one",1);
+		m.put("two",2);
+		m.put("three",3);
+		m.put("four",4);
+		m.put("nagaar", 6778);
+		
+		System.out.println(m );
+		System.out.println(m.put("two", 8));
+		Set s=m.entrySet();
+		
+		System.out.println(s );
+	}
+
+}

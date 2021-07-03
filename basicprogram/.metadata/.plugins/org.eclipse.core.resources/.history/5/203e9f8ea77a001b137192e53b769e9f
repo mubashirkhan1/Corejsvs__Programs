@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action = "Servletprogram3.java" method="get">
+<input name="name" type="text"><br>
+<input type="login" value="login">
+</form>
+</body>
+</html>

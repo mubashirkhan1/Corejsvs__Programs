@@ -1,0 +1,22 @@
+package logicalprograms;
+
+public class lowestcommonfactor {
+	public static void main(String[] args) {
+		
+	
+	int no1=256,no2=198 ,temp=1 ,p=2;
+	while(no1!=0 &&no2!=0) {
+	if(no1%p==0 && no2%p==0) {
+		temp=temp*p;
+		no1=no1/p; no2=no2/p;
+		if(no1%p !=0 && no2%p !=0)
+		{
+			++p;
+		}
+		
+	}
+	System.out.println(temp);
+	}
+	System.out.println(temp);
+	}
+}

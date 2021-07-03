@@ -1,0 +1,14 @@
+package collectionprograms11;
+import collectionprograms11.Innerclassinterface.A1;
+import collectionprograms11.Innerclassinterface.A1.A2;
+public class Innerclass1 {
+	public static void main(String[] args) {
+		//A1 a=new A1();
+	  Exinterface s=new A();
+		s.show4();
+		
+		
+	}
+	
+
+}

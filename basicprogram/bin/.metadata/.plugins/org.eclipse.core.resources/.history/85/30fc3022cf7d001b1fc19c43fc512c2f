@@ -1,0 +1,54 @@
+package com.cookies2;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/cookies2")
+public class cookies2 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest rq, HttpServletResponse rs) throws ServletException, IOException {
+		String name=rq.getParameter("name");
+		 rs.setContentType("text/html");
+		 PrintWriter pw=rs.getWriter();
+		 pw.println("<h1>i am cooki 2                 <h1>"+name);
+		Cookie co[]=  rq.getCookies();
+		boolean f=false;
+		String name1="";
+		if(co==null) {
+			pw.print("<h1>your are new user go to home page and submit your name<h1>");
+			
+		}
+		else {
+			for(Cookie co1: co) {
+				
+				String tname=co1.getName();
+				if(tname.equals("username"))
+				{
+					 f=true;
+					 name1 =co1.getValue();
+				}
+				
+				}
+			
+				
+			}
+		      if(f) {
+		    		pw.print("<h1>ywelcom back my website <h1>"+ name1);
+		    	    pw.println("<h1>thank you<h1>");
+		      }else {
+		    	  pw.print("<h1>your are new user go to home page and submit your name<h1>");
+		    	  
+		      }
+		}
+	}
+
+

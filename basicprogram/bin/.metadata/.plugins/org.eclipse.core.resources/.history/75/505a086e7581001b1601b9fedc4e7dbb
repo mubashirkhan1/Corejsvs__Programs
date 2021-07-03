@@ -1,0 +1,31 @@
+package librarymanagementseystem;
+
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Frame;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class Login_user extends JFrame 
+{
+	 private JPanel panel;
+	 private JTextField textfield;
+	 private JPasswordField passfield;
+	 private Button b1,b2,b3;
+
+
+	public Login_user() 
+	{
+		setBackground( Color.CYAN);
+		
+	}
+	
+	public static void main(String[] args) {
+		//new Login_user();
+		Frame f=new Frame();
+		f.setBackground(null);
+	}
+}

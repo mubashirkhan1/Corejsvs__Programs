@@ -1,0 +1,42 @@
+package com.java;
+ class Employe implements Comparable{
+	 int id;
+	 String name;
+	public Employe(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+		
+	}
+	 
+ 
+	
+@Override
+	public String toString() {
+		return "Employe [id=" + id + ", name=" + name + "]";
+	}
+
+
+
+@Override
+public int compareTo(Object obj1) {
+	int id1=this.id;
+			Employe e=(Employe)obj1;
+			int id2=e.id;
+			if(id1<id2) {return -1;}
+			else if(id1>id2) {return +1;}
+			else {return 0;}
+}
+   
+ }
+
+
+public class OwnclassCostimizerorder {
+	public static void main(String[] args) {
+		
+		TreeSet ts=new TreeSet();
+		
+		
+	}
+
+}

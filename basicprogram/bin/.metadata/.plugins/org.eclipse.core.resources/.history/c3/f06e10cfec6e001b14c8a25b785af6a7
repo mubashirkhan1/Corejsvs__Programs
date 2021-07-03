@@ -1,0 +1,17 @@
+package com.basic;
+
+public class examplegc {
+
+
+		 public void finalize(){System.out.println("object is garbage collected");}
+
+		 public static void main(String args[]){
+			 examplegc s1=new  examplegc();
+		  examplegc s2=new  examplegc();
+		  s1=s2;
+		  
+		  System.gc();
+		 }
+		}
+
+

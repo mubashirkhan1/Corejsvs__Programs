@@ -1,0 +1,14 @@
+package logicalprograms;
+
+import java.util.Scanner;
+
+public class Ascivalue {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter your character");
+		char p=s.next().charAt(0);
+	     int asci= p;
+	     System.out.println("asci value of this char  vale     "+p+"" +"    "+asci);
+	}
+
+}

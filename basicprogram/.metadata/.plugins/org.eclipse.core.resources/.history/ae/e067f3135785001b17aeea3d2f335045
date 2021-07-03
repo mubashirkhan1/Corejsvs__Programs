@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><web-app>  
+  
+<servlet>  
+<servlet-name>mubashir</servlet-name>  
+<jsp-file>/jspprograms3.jsp</jsp-file>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>mubashir</servlet-name>  
+<url-pattern>/jsprograms3</url-pattern>  
+</servlet-mapping>  
+  
+<context-param>  
+<param-name>dname</param-name>  
+<param-value>mubashir</param-value>  
+</context-param>  
+  
+</web-app>  

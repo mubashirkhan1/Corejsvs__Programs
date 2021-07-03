@@ -1,0 +1,27 @@
+package jdbcprograms11;
+import java.sql.*;
+public class Connectwithjdbc {
+	public static void main(String[] args) throws Exception{
+		//try {
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","root");
+		Statement st=con.createStatement();
+		ResultSet rs=st.executeQuery("select  id from  students");
+		while (rs.next()) {
+			System.out.println("name " + rs.getInt("id")+ rs.getString(2)+"  "+rs.getInt(3)+rs.getString(4)+rs.getInt(0));
+	
+		
+	//	}
+		//}catch(Exception e) {System.out.println(e);
+		//e.printStackTrace();
+		}
+		st.close();
+		con.close();
+		
+		
+		}
+		}
+		
+	
+
+

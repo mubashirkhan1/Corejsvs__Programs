@@ -1,0 +1,29 @@
+package Arrayprograms;
+
+import java.util.Arrays;
+
+public class Arraysort1 {
+	public static void main(String[] args) {
+		int temp;
+	
+//	int length;
+	int []array= { 2, 5, -2, 6, -3, 8, 0, -7, -9, 4 };
+	 Arrays.sort(array);
+	 System.out.println(array);
+    /*  int	length=array.length;
+	for(int i=1;i<=length;i++)
+	{
+		for(int j=i;j<=length;j++) {
+			if(array[i]>array[j])
+			{
+				temp=array[i];
+				array[i]=array[j];
+				array[j]=temp;
+			}
+			
+			
+		}
+	}
+	 for(int value:array) {System.out.println(array[value]);}*/
+	}
+}

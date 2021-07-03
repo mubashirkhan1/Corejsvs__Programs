@@ -1,0 +1,14 @@
+package com.basic;
+
+import java.util.*;
+
+public class A {
+	public static void main(String[] args) {
+		 Vector v=new Vector();
+		 Enumeration e=v.elements();
+		 Iterator itr=v.iterator();
+		ListIterator litr=v.listIterator();
+		System.out.println(e.getClass().getCanonicalName());
+	}
+}
+

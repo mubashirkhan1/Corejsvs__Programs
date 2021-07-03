@@ -1,0 +1,15 @@
+package Mapprograms;
+
+public class Weekhashmap {
+public static void main(String[] args) {
+	Hash
+}
+
+@Override
+public String toString() {
+	return "Weekhashmap []";
+}
+}
+class temp{
+	
+}

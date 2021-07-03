@@ -1,0 +1,15 @@
+package collectionprograms11;
+
+import java.util.TreeSet;
+
+public class TreesetwithStringbuffer {
+	public static void main(String[] args) {
+		TreeSet ts=new TreeSet();
+		ts.add( new StringBuffer("Abb"));
+		ts.add( new StringBuffer("Cbb"));
+		ts.add( new StringBuffer("Dbb"));
+		System.out.println(ts);
+		
+	}
+
+}

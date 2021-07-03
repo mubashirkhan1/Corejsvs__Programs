@@ -1,0 +1,32 @@
+package Mapprograms;
+
+import java.util.TreeMap;
+
+public class Hashtableexample1 {
+	public static void main(String[] args) {
+		TreeMap t=new TreeMap();
+		t.put(new Temp9(5), "A");
+		t.put(new Temp9(2), "B");
+		t.put(new Temp9(6), "C");
+		t.put(new Temp9(15), "D");
+		t.put(new Temp9(23), "E");
+		t.put(new Temp9(16), "F");
+		System.out.println(t);
+	
+	}
+
+}
+class Temp9{
+	int i;
+	Temp9(int i){
+	this.i=i;	
+	}
+	@Override
+	public int hashCode() {
+		return i;
+	
+}
+	public String toString() {
+		return i+"";
+	}
+}

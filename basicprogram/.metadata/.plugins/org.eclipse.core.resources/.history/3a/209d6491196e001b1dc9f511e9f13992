@@ -1,0 +1,16 @@
+package collectionprograms11;
+abstract class Ab{abstract void m1();}
+public class Anonymousinnerclass {
+	public static void main(String[] args) {
+		
+		Ab a=new Ab() {
+			
+			void m1() {
+				System.out.println("mubashir khan");
+			}
+		};
+		   a.m1();
+	}
+
+}
+

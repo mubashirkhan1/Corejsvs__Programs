@@ -1,0 +1,24 @@
+package com.basic;
+
+    class Constructorcalling {
+  	  Constructorcalling()
+  	 	{
+  	 		 System.out.println("parents class constructor");
+  			
+  		}
+	public static void main(String[] args) {
+		Constructorchild child=new Constructorchild();
+		child.m1();
+	 
+		
+	}
+
+}
+ class Constructorchild{
+	 Constructorchild(){
+		 System.out.println("child construct");
+	 }
+	 void m1() {
+		 System.out.println("m1 method");
+	 }
+ }

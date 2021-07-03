@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Form page</title>
+
+</head>
+<body>
+
+  name<input type="text" name="uname">
+ <input type="submit" value="save">
+  <a href="welcome">Click to call Servlet</a>
+
+</body>
+</html>

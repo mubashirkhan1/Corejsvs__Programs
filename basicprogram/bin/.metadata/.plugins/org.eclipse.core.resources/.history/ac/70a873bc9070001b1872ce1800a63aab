@@ -1,0 +1,17 @@
+package Mapprograms;
+
+import java.util.TreeMap;
+
+public class Treemapexample1 {
+	public static void main(String[] args) {
+		TreeMap t=new TreeMap();
+		t.put(100, "mmm");
+		t.put(102, "pppp");
+		t.put(100, "g");
+		t.put(103, "h");
+		t.put(123, "mmm");
+		t.put(106, "7777");
+		System.out.println(t);
+	}
+
+}
